@@ -19,7 +19,8 @@ export interface AnimationTailwindClasses {
 export type AuthProviders = Provider
 export interface Localization {
   // [key: string]: I18nVariables
-  ['en']: I18nVariables
+  ['en']: I18nVariables,
+  ['it']: I18nVariables,
 }
 
 // export type SocialLayout = 'horizontal' | 'vertical'
@@ -103,6 +104,7 @@ export interface BaseAuth {
    * Override the labels and button text
    */
   localization?: {
+    language?: keyof Localization
     variables?: I18nVariables
   }
   theme?: 'default' | string

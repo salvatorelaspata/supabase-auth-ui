@@ -1,5 +1,5 @@
 import { createStitches, createTheme } from '@stitches/core'
-import { I18nVariables, merge, VIEWS, en } from '@supabase/auth-ui-shared'
+import { I18nVariables, merge, VIEWS, en, it } from '@supabase/auth-ui-shared'
 import React, { useEffect, useState } from 'react'
 import { Auth as AuthProps } from '../../types'
 import {
@@ -26,7 +26,7 @@ function Auth({
   showLinks = true,
   appearance,
   theme = 'default',
-  localization = { variables: {} },
+  localization = { variables: {} }, // default language is english
   otpType = 'email',
   additionalData,
   passwordLimit,
@@ -36,8 +36,9 @@ function Auth({
    * Localization support
    */
 
-  const i18n: I18nVariables = merge(en, localization.variables ?? {})
-
+  let language = en
+  if(localization.language === 'it') language = it 
+  const i18n: I18nVariables = merge(language, localization.variables ?? {})
   const [authView, setAuthView] = useState(view)
   const [defaultEmail, setDefaultEmail] = useState('')
   const [defaultPassword, setDefaultPassword] = useState('')

@@ -43,6 +43,7 @@ function App() {
   const [borderRadius, setBorderRadius] = useState(radii[0] as string)
   const [theme, setTheme] = useState('dark')
   const [socialLayout, setSocialLayout] = useState<SocialLayout>(socialAlignments[1] satisfies SocialLayout)
+  const [language, setLanguage] = useState('en' as 'en' | 'it')
   const [view, setView] = useState(views[0])
 
   return (
@@ -85,6 +86,9 @@ function App() {
                   providers={['apple', 'google', 'github']}
                   socialLayout={socialLayout}
                   theme={theme}
+                  localization={{
+                    language: language,
+                  }}
                 />
               </div>
             </div>
@@ -200,6 +204,29 @@ function App() {
                 >
                   <MenuIcon className="text-scale-900 dark:text-scale-1100 w-6" />
                 </ToggleButton>
+              </div>
+            </div>
+
+            {/* Create toggle to language (en, it) */}
+            <div className="flex flex-col gap-6">
+              <div className="text-scale-1200 text-base">Language</div>
+              <div className="flex items-center gap-3">
+                <ToggleButton
+                  selected={language}
+                  setSelected={(language) => {
+                    setLanguage(language as 'en')
+                  }}
+                  defaultValue="en"
+                  children="en"
+                />
+                <ToggleButton
+                  selected={language}
+                  setSelected={(language) => {
+                    setLanguage(language as 'it')
+                  }}
+                  defaultValue="it"
+                  children="it"
+                />
               </div>
             </div>
 

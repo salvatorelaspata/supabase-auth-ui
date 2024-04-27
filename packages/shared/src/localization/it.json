@@ -1,0 +1,57 @@
+{
+  "sign_up": {
+    "email_label": "Indirizzo email",
+    "password_label": "Passowrd",
+    "email_input_placeholder": "Inserisci la tua email",
+    "password_input_placeholder": "Inserisci la tua password",
+    "button_label": "Registrati",
+    "loading_button_label": "Registrazione in corso ...",
+    "social_provider_text": "Accedi con {{provider}}",
+    "link_text": "Non hai un account? Registrati",
+    "confirmation_text": "Controlla la tua email per confermare la registrazione"
+  },
+  "sign_in": {
+    "email_label": "Indirizzo email",
+    "password_label": "Passowrd",
+    "email_input_placeholder": "Inserisci la tua email",
+    "password_input_placeholder": "Inserisci la tua password",
+    "button_label": "Accedi",
+    "loading_button_label": "Accesso in corso ...",
+    "social_provider_text": "Accedi con {{provider}}",
+    "link_text": "Hai già un'account? Accedi"
+  },
+  "magic_link": {
+    "email_input_label": "Indirizzo email",
+    "email_input_placeholder": "Inserisci la tua email",
+    "button_label": "Invia email con link magico",
+    "loading_button_label": "Invio email in corso ...",
+    "link_text": "Accedi con un link magico",
+    "confirmation_text": "Controlla la tua email per accedere con un link magico"
+  },
+  "forgotten_password": {
+    "email_label": "Indirizzo email",
+    "password_label": "Password",
+    "email_input_placeholder": "Inserisci la tua email",
+    "button_label": "Invia istruzioni per il reset della password",
+    "loading_button_label": "Invio email in corso ...",
+    "link_text": "Hai dimenticato la password? Resetta la password",
+    "confirmation_text": "Controlla la tua email per resettare la password"
+  },
+  "update_password": {
+    "password_label": "Nuova password",
+    "password_input_placeholder": "Inserisci la nuova password",
+    "button_label": "Aggiorna",
+    "loading_button_label": "Aggiornamento in corso ...",
+    "confirmation_text": "La tua password è stata aggiornata con successo"
+  },
+  "verify_otp": {
+    "email_input_label": "Indirizzo email",
+    "email_input_placeholder": "Inserisci la tua email",
+    "phone_input_label": "Numero di telefono",
+    "phone_input_placeholder": "Inserisci il tuo numero di telefono",
+    "token_input_label": "Token Otp",
+    "token_input_placeholder": "Inserisci il token Otp",
+    "button_label": "Verifica",
+    "loading_button_label": "Verifica in corso ..."
+  }
+}

@@ -15,6 +15,12 @@ Before you begin, make sure you have the following set up on your local machine.
 pnpm install
 ```
 
+### Set up the environment variables
+
+Copy the `.env.example` file and rename it to `.env`. 
+
+Fill in the environment variables with the appropriate values (SUPABASE_URL, SUPABASE_ANON_KEY).
+
 ### Development setup
 
 You can run all the packages in development mode using the following command:
