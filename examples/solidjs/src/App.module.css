@@ -83,6 +83,11 @@
   color: #b318f0;
 }
 
+.btn-language {
+  color: white !important;
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   .header {
     background-color: #282c34;

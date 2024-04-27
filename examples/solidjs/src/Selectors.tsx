@@ -10,12 +10,15 @@ import styles from './App.module.css'
 import {
   customBorderRadius,
   customButtonColor,
+  customLanguage,
   customSocialLayout,
   customTheme,
   setCustomBorderRadius,
   setCustomButtonColor,
+  setCustomLanguage,
   setCustomSocialLayout,
   setCustomTheme,
+  type languages,
 } from './store'
 import Logo from './logo.svg'
 import { MaterialUISwitch } from './muiswitch'
@@ -42,6 +45,7 @@ function Selectors() {
         <ColorToggles />
         <RadiusToggles />
         <AlignmentToggles />
+        <LanguageToggles />
       </div>
     </div>
   )
@@ -146,6 +150,28 @@ function ColorToggles() {
         <ToggleButton value={colors.orange}>
           <Circle style={{ color: colors.orange }} />
         </ToggleButton>
+      </ToggleButtonGroup>
+    </div>
+  )
+}
+
+function LanguageToggles() {
+  function handleChange(e: MouseEvent, newLanguage: languages) {
+    if (newLanguage !== null) {
+      setCustomLanguage(newLanguage)
+    }
+  }
+
+  return (
+    <div>
+      <h5>Language</h5>
+      <ToggleButtonGroup
+        value={customLanguage()}
+        exclusive
+        onChange={handleChange}
+      >
+        <ToggleButton class={styles['btn-language']} value={'en'}>EN</ToggleButton>
+        <ToggleButton class={styles['btn-language']} value={'it'}>IT</ToggleButton>
       </ToggleButtonGroup>
     </div>
   )

@@ -4,6 +4,7 @@ import Selectors from './Selectors'
 import {
   customBorderRadius,
   customButtonColor,
+  customLanguage,
   customSocialLayout,
   customTheme,
 } from './store'
@@ -43,9 +44,10 @@ function App() {
                 },
               },
             }}
-            providers={['apple', 'google', 'github']}
+            providers={['apple', 'google', 'github',]}
             socialLayout={customSocialLayout()}
             theme={customTheme()}
+            localization={{ language: customLanguage() }}
           />
         </div>
       </div>

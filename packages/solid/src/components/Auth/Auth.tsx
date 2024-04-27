@@ -5,6 +5,7 @@ import {
   SocialLayouts,
   VIEWS,
   en,
+  it,
   SocialLayout,
   OtpType,
   ViewType,
@@ -61,9 +62,11 @@ function Auth(props: AuthProps): JSX.Element | null {
   })
 
   const i18n: Accessor<I18nVariables> = createMemo(() => {
+    let language = en
+    if (props.localization?.language === 'it') language = it
     const merged = merge(
       //@ts-ignore
-      en,
+      language,
       mergedProps().localization.variables ?? {}
     )
     return merged

@@ -7,3 +7,5 @@ export const [customBorderRadius, setCustomBorderRadius] = createSignal('5px')
 export const [customTheme, setCustomTheme] = createSignal('dark')
 export const [customSocialLayout, setCustomSocialLayout] =
   createSignal<SocialLayout>('horizontal')
+export type languages = 'en' | 'it'
+export const [customLanguage, setCustomLanguage] = createSignal<languages>('en')
