@@ -2,6 +2,7 @@
 	import type { Provider, SupabaseClient } from '@supabase/supabase-js';
 	import type {
 		I18nVariables,
+		Languages,
 		ProviderScopes,
 		SocialLayout,
 		ViewType
@@ -19,7 +20,7 @@
 	export let showLinks = false;
 	export let appearance: Appearance = {};
 	export let theme: 'default' | string = 'default';
-	export let localization: { variables?: I18nVariables } = {};
+	export let localization: { variables?: I18nVariables, language?: Languages } = {};
 	export let passwordLimit: boolean = false;
 	export let additionalData: { [key: string]: any } | undefined = undefined;
 </script>

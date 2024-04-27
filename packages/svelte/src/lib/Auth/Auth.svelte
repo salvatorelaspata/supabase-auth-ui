@@ -9,7 +9,13 @@
 		type SocialLayout,
 		type ViewType,
 		type ProviderScopes,
-		type OtpType
+		type OtpType,
+
+		type Languages,
+
+		it
+
+
 	} from '@supabase/auth-ui-shared';
 	import type { Appearance } from '$lib/types';
 	import EmailAuth from './interfaces/EmailAuth.svelte';
@@ -32,7 +38,7 @@
 	export let showLinks = true;
 	export let appearance: Appearance = {};
 	export let theme: 'default' | string = 'default';
-	export let localization: { variables?: I18nVariables } = {};
+	export let localization: { variables?: I18nVariables, language?: Languages } = {};
 	export let otpType: OtpType = 'email';
 	export let passwordLimit: boolean = false;
 	export let additionalData: { [key: string]: any } | undefined = undefined;
@@ -49,7 +55,11 @@
 		() => authListener.subscription.unsubscribe();
 	});
 
-	$: i18n = merge(en, localization.variables ?? {});
+	// if location provided is !== en then merge with en else use 'it' for example
+	let lang = en;
+	if(localization.language === 'it') { lang = it; }
+
+	$: i18n = merge(lang, localization.variables ?? {});
 
 	$: createStitches({
 		theme: merge(appearance?.theme?.default ?? {}, appearance?.variables?.default ?? {})

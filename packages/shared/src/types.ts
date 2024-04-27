@@ -23,6 +23,8 @@ export interface Localization {
   ['it']: I18nVariables,
 }
 
+export type Languages = keyof Localization
+
 // export type SocialLayout = 'horizontal' | 'vertical'
 export enum SocialLayouts {
   'horizontal',

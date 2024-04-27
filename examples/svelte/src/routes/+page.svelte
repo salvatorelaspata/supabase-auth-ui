@@ -35,6 +35,7 @@
 	let brandColor = colors[0];
 	let socialLayout = socialAlignments[1] satisfies SocialLayout;
 	let borderRadius = radii[0];
+	let lang: 'en' | 'it' = 'en';
 	let view = views[0];
 </script>
 
@@ -81,6 +82,7 @@
 							}}
 							providers={['apple', 'google', 'github']}
 							{socialLayout}
+							localization={{ language: lang }}
 						/>
 					</div>
 				</div>
@@ -166,6 +168,26 @@
 									{/each}
 								</select>
 							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex flex-col gap-6">
+					<div class="text-scale-1200 text-base">Language ({lang})</div>
+					<div class="flex items-center gap-3">
+						<div class="flex items-center gap-3">		
+							<ToggleButton
+								bind:selected={lang}
+								defaultValue={'en'}
+								class="rounded-2xl border-b-0 border-l-0"
+							>EN</ToggleButton>
+
+							<ToggleButton
+								bind:selected={lang}
+								defaultValue={'it'}
+								class="rounded-2xl border-b-0 border-l-0"
+							>IT</ToggleButton>
+
 						</div>
 					</div>
 				</div>
